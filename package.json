@@ -1,0 +1,40 @@
+{
+  "name": "sysco-scraper",
+  "version": "1.0.0",
+  "description": "Professional web scraper for Sysco.com products using Puppeteer",
+  "main": "src/scrapers/sysco-paginated.js",
+  "type": "module",
+  "scripts": {
+    "scrape": "node src/scrapers/sysco-paginated.js",
+    "setup": "node src/database/sysco-setup.js",
+    "dev": "HEADLESS=false node src/scrapers/sysco-paginated.js",
+    "export": "node src/scripts/export-csv.js"
+  },
+  "keywords": [
+    "puppeteer",
+    "web-scraping",
+    "sysco",
+    "nodejs",
+    "food-service",
+    "product-scraper"
+  ],
+  "author": "Developer",
+  "license": "MIT",
+  "dependencies": {
+    "csv": "^6.3.11",
+    "dotenv": "^17.1.0",
+    "puppeteer": "^24.12.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "sqlite3": "^5.1.7",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
